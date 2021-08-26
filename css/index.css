@@ -1,0 +1,709 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --moonmoon: rgb(130, 100, 200);
+  --snow: url("../multimedia/snow-texture.png");
+}
+
+body {
+  margin: 0 0 0 0;
+  overflow-x: hidden;
+  font-family: 'Poppins';
+  min-height: 100vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body ul {
+  list-style-type: none;
+}
+
+div.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+}
+
+div.navbar {
+  padding: 0.4em;
+  position: fixed;
+  top: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 999;
+}
+
+div.navbar div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+  margin-top: 0.5em;
+}
+
+div.navbar div.container div.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: .2em;
+}
+
+div.navbar div.container div.logo img.logo-img {
+  width: 4em;
+  padding: 0 1em;
+}
+
+div.navbar div.container div.logo img.logo-img:hover {
+  cursor: pointer;
+}
+
+div.navbar div.container div.logo a.logo-text {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.25em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+div.navbar div.container div.logo a.logo-text:hover {
+  cursor: pointer;
+}
+
+div.navbar div.container img.mobile-nav-open {
+  display: none;
+}
+
+div.navbar div.container nav {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 12.4em;
+  right: 0;
+  top: 0;
+  background: var(--moonmoon);
+  height: 100vh;
+  padding: 1em;
+}
+
+div.navbar div.container nav img.mobile-nav-close {
+  width: 2em;
+  float: right;
+  padding-right: 1.5em;
+  padding-top: 1.2em;
+  cursor: pointer;
+}
+
+div.navbar div.container nav ul.nav-list {
+  margin-top: 5em;
+}
+
+div.navbar div.container nav ul.nav-list li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.25em;
+  text-align: right;
+}
+
+div.navbar div.container nav ul.nav-list li a:hover {
+  cursor: pointer;
+}
+
+div.hero-container {
+  background-image: url("../multimedia/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 65% 65%;
+  width: 100%;
+  height: 100vh;
+}
+
+section.compete {
+  background-image: var(--snow);
+  width: 100%;
+  height: calc(100vh - 92px);
+}
+
+section.compete div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(76vh - 92px);
+  padding: 12vh 0 12vh 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.compete div.container div.compete-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1em;
+}
+
+section.compete div.container div.compete-top div.compete-top-text h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+section.compete div.container div.compete-top div.compete-top-text h1 span {
+  color: var(--moonmoon);
+}
+
+section.compete div.container div.compete-top div.compete-top-text p {
+  font-size: 1.5em;
+  margin: 0;
+  margin-left: 2em;
+  max-width: 32em;
+}
+
+section.compete div.container div.compete-top img {
+  width: 14em;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+section.compete div.container div.compete-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.compete div.container div.compete-bottom p {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 3em;
+}
+
+section.compete div.container div.compete-bottom p span {
+  color: var(--moonmoon);
+}
+
+section.compete div.container div.compete-bottom a {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: var(--moonmoon);
+  padding: 0.69em 2em;
+  border-radius: 999em;
+}
+
+section.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: calc(100vh - 92px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.socials div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(80vh - 92px);
+  padding: 10vh 0 10vh 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.socials div.container div.socials-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section.socials div.container div.socials-links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+section.socials div.container div.socials-links a img {
+  width: 6em;
+}
+
+section.socials div.container div.socials-links a img.socials-youtube-img, section.socials div.container div.socials-links a img.socials-twitter-img {
+  width: 5.2em;
+  margin: 0.4em;
+}
+
+section.socials div.container div.socials-links a p {
+  color: black;
+  font-size: 1.5em;
+  margin: 0;
+  padding-left: 0.8em;
+}
+
+section.socials div.container div.socials-text {
+  margin-right: 1em;
+}
+
+section.socials div.container div.socials-text h1 {
+  margin: 0;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+section.socials div.container div.socials-text h1 span {
+  color: var(--moonmoon);
+}
+
+section.socials div.container div.socials-text p {
+  margin: 0;
+  margin-right: 2em;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+section.socials div.container div.socials-text p span {
+  color: white;
+}
+
+section.donate {
+  background-image: var(--snow);
+  width: 100%;
+  height: calc(96vh - 92px);
+}
+
+section.donate img {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  width: 12em;
+  -webkit-filter: invert(54%) sepia(20%) saturate(7383%) hue-rotate(226deg) brightness(83%) contrast(86%);
+          filter: invert(54%) sepia(20%) saturate(7383%) hue-rotate(226deg) brightness(83%) contrast(86%);
+  -webkit-transform: rotate(345deg);
+          transform: rotate(345deg);
+  margin-left: calc(20% - 12em);
+  margin-top: 8vh;
+}
+
+section.donate div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section.donate div.container div.donate-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.donate div.container div.donate-text h1 {
+  display: inline;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+section.donate div.container div.donate-text h1 span {
+  color: var(--moonmoon);
+}
+
+section.donate div.container div.donate-text p {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+}
+
+section.donate div.container div.donate-text p span {
+  color: var(--moonmoon);
+  font-weight: bold;
+}
+
+section.donate div.container a.donate-button {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: var(--moonmoon);
+  padding: 0.69em 2em;
+  border-radius: 999em;
+}
+
+footer.signature {
+  position: relative;
+  background-image: var(--snow);
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 4vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer.signature p.signature-text {
+  text-align: center;
+  font-size: 1em;
+  margin: 0;
+}
+
+footer.signature p.signature-text a {
+  text-decoration: none;
+  color: var(--moonmoon);
+}
+
+@media only screen and (max-width: 1095px) {
+  section.compete {
+    font-size: .6em;
+    text-align: center;
+  }
+  section.compete div.container div.compete-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.compete div.container div.compete-top div.compete-top-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.compete div.container div.compete-top div.compete-top-text p {
+    margin-left: 0;
+    font-size: 1.5em;
+  }
+  section.compete div.container div.compete-top div.compete-top-text h1 {
+    font-size: 3em;
+    margin-bottom: .3em;
+    line-height: 1.2em;
+    max-width: 476px;
+  }
+  section.compete div.container div.compete-top img {
+    display: none;
+  }
+  section.compete div.container div.compete-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.compete div.container div.compete-bottom p {
+    margin-left: 0;
+    font-size: 1.5em;
+  }
+  section.compete div.container div.compete-bottom p span {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  section.compete div.container div.compete-bottom a {
+    margin-bottom: 1em;
+  }
+  section.socials {
+    font-size: .6em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.socials div.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0;
+    height: inherit;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  section.socials div.container div.socials-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 31vh;
+  }
+  section.socials div.container div.socials-links a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 49%;
+    margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.socials div.container div.socials-links a p {
+    display: none;
+  }
+  section.socials div.container div.socials-text {
+    margin: 0;
+  }
+  section.socials div.container div.socials-text p {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+  }
+  section.socials div.container div.socials-text h1 {
+    font-size: 3em;
+  }
+  section.donate {
+    font-size: .6em;
+  }
+  section.donate img {
+    margin-top: 39vh;
+    margin-left: calc(50% - 18em);
+  }
+  section.donate div.container div.donate-text h1 {
+    font-size: 3em;
+  }
+  section.donate div.container div.donate-text p {
+    font-size: 1.25em;
+  }
+  footer.signature {
+    font-size: .9em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  div.navbar div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  div.navbar div.container div.logo {
+    margin: 0;
+    margin-right: 1em;
+  }
+  div.navbar div.container div.logo a img.logo-img {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  section.donate div.container div.donate-text p {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  img.mobile-nav-open, img.mobile-nav-close {
+    display: none;
+  }
+  div.navbar div.container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+  }
+  div.navbar div.container nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin-right: .5em;
+  }
+  div.navbar div.container nav ul.nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  div.navbar div.container nav ul.nav-list li a {
+    color: black;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 1em .6em;
+    text-align: center;
+  }
+  div.navbar div.container nav ul.nav-list li a:hover {
+    color: var(--moonmoon) !important;
+    cursor: pointer;
+  }
+  div.navbar div.container nav ul.nav-list li a:before {
+    display: block;
+    content: attr(alt);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  section.compete {
+    font-size: 0.8em;
+  }
+  section.socials {
+    font-size: 0.8em;
+  }
+  section.donate {
+    font-size: 0.8em;
+  }
+  section.donate div.container div.donate-text p {
+    font-size: 1.5em;
+  }
+  footer.signature {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  div.container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section.compete {
+    font-size: 0.8em;
+  }
+  section.compete div.container div.compete-top img {
+    width: 14em;
+  }
+  section.compete div.container div.compete-bottom a {
+    margin-right: 1.9em;
+  }
+  section.compete div.container div.compete-bottom p {
+    margin-left: 2.6em;
+  }
+  section.socials div.container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100vw;
+  }
+  section.compete div.container div.compete-top img {
+    width: 14em;
+  }
+  section.compete div.container div.compete-bottom a {
+    margin-right: .4em;
+  }
+  section.socials div.container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: calc(1080px/0.75)) {
+  div.container {
+    width: 75%;
+    margin: 0 auto;
+  }
+  section.socials div.container {
+    width: 75%;
+    margin: 0 auto;
+  }
+  section.compete div.container div.compete-bottom a {
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */
