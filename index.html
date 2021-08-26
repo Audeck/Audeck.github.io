@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - audeck</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="multimedia/favicon.svg">
+</head>
+<body>
+    <div id="navbar" class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a onclick="landingScroll()"><img class="logo-img" src="multimedia/logo.svg"></a>
+                <a onclick="landingScroll()" class="logo-text">audeck</a>
+            </div>
+
+            <img id="mobile-nav-open" class="mobile-nav-open" src="multimedia/mobile-nav-open.svg" alt="Open the navigation menu.">
+
+            <nav id="nav">
+                <img id="mobile-nav-close" class="mobile-nav-close" src="multimedia/mobile-nav-close.svg" alt="Close the navigation menu.">
+
+                <ul class="nav-list">
+                    <li><a id="nav-compete" alt="Compete" onclick="competeScroll()">Competitions</a></li>
+                    <li><a id="nav-socials" alt="Socials" onclick="socialsScroll()">Socials</a></li>
+                    <li><a id="nav-donate" alt="Donate" onclick="donateScroll()">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="hero-container"><div></div></div>
+
+    <section class="compete">
+        <div class="container">
+            <div class="compete-top">
+                <div class="compete-top-text">
+                    <h1>A new home for <span>Minecraft challenges</span>.</h1>
+                    <p>Whether you want to challenge yourself, compete with others, or just check out the top times, feel free to take a look!</p>
+                </div>
+                <img src="multimedia/trophy.svg">
+            </div>
+
+            <div class="compete-bottom">
+                <p><span>Current competition:</span> Beating Minecraft without mining!</p>
+                <a href="http://compete.audeck.xyz">EXPLORE</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="socials">
+        <div class="container">
+            <div class="socials-links">
+                <a href="https://www.youtube.com/channel/UCOq1YFWg_6uwZ0sxyR3hLAA" target="_blank" rel="noreferrer noopener">
+                    <img class="socials-youtube-img" src="multimedia/youtube.svg" alt="YouTube">
+                    <p>audeck</p>
+                </a>
+
+                <a href="https://www.twitch.tv/audecklive" target="_blank" rel="noreferrer noopener">
+                    <img src="multimedia/twitch.svg" alt="Twitch">
+                    <p>audeckLive</p>
+                </a>
+
+                <a href="https://www.twitter.com/audeckWasTaken" target="_blank" rel="noreferrer noopener">
+                    <img class="socials-twitter-img" src="multimedia/twitter.svg" alt="Twitter">
+                    <p>audeckWasTaken</p>
+                </a>
+
+                <a href="https://www.instagram.com/audeckwastaken/" target="_blank" rel="noreferrer noopener">
+                    <img src="multimedia/instagram.svg" alt="Instagram">
+                    <p>audeckWasTaken</p>
+                </a>
+            </div>
+
+            <div class="socials-text">
+                <h1>Follow me <span>online</span>!</h1>
+                <p>
+                    I do stuff online<br>
+                    Sometimes it's entertaining<br>
+                    Follow me <span>or else</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="donate">
+        <img src="multimedia/heart.svg">
+        <div class="container">
+            <div class="donate-text">
+                <div>
+                    <h1>Consider <span>donating</span>?</h1>
+                </div>
+                <p>
+                    I don't want to put any of my content behind a pay wall.<br>
+                    As such, donations are my main source of upkeep.<br>
+                    Donate <span>only</span> if you have the money to spare.<br>
+                    Please &amp; thank you!
+                </p>
+            </div>
+            <a class="donate-button" href="https://www.paypal.com/donate?hosted_button_id=U3C6N8R45EC36" target="_blank" rel="noreferrer noopener" alt="Donate button">DONATE</a>
+        </div>
+    </section>
+
+    <footer class="signature">
+        <p class="signature-text">Website made with <a href="https://twitter.com/dog_feelings" target="_blank" rel="noreferrer noopener" alt="love">&lt;3</a> by audeck. | Work in progress.</p>
+    </footer>
+
+    <script>
+        let nav = document.getElementById('nav');
+        let navbar = document.getElementById('navbar');
+        let mobile_button_open = document.getElementById('mobile-nav-open');
+        let mobile_button_exit = document.getElementById('mobile-nav-close');
+        let nav_compete = document.getElementById('nav-compete');
+        let nav_socials = document.getElementById('nav-socials');
+        let nav_donate = document.getElementById('nav-donate');
+
+        mobile_button_open.addEventListener('click', () => {
+            nav.style.display = 'block';
+        });
+
+        mobile_button_exit.addEventListener('click', () => {
+            nav.style.display = 'none';
+        });
+
+        window.onscroll = function() {
+            let viewport_height = document.documentElement.clientHeight;
+            let distance_scrolled = document.documentElement.scrollTop;
+
+            navbar.style.backgroundColor = "#FFFFFF" + ("0" + Math.round((255 * 0.4 * Math.min(distance_scrolled/200, 1))).toString(16)).slice(-2);
+            navbar.style.boxShadow = "0 0 1rem #000000" + ("0" + Math.round((255 * 0.2 * Math.min(distance_scrolled/200, 1))).toString(16)).slice(-2);
+            navbar.style.backdropFilter = 'blur(' + Math.round(16 * Math.min(distance_scrolled/200, 1)) + 'px)';
+
+            if (distance_scrolled >= 5*viewport_height/2 - 92) {
+                nav_compete.style.color = "#000000";
+                nav_socials.style.color = "#000000";
+                nav_donate.style.color = "var(--moonmoon)";
+            } else if (distance_scrolled >= 3*viewport_height/2 - 92) {
+                nav_compete.style.color = "#000000";
+                nav_socials.style.color = "var(--moonmoon)";
+                nav_donate.style.color = "#000000";
+            } else if (distance_scrolled >= viewport_height/2 - 92) {
+                nav_compete.style.color = "var(--moonmoon)";
+                nav_socials.style.color = "#000000";
+                nav_donate.style.color = "#000000";
+            } else {
+                nav_compete.style.color = "#000000";
+                nav_socials.style.color = "#000000";
+                nav_donate.style.color = "#000000";
+            }
+        }
+
+        function landingScroll() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        function competeScroll() {
+            window.scrollTo({
+                top: document.documentElement.clientHeight - 92,
+                behavior: "smooth"
+            });
+        }
+
+        function socialsScroll() {
+            window.scrollTo({
+                top: 2*document.documentElement.clientHeight - 2*92,
+                behavior: "smooth"
+            });
+        }
+
+        function donateScroll() {
+            window.scrollTo({
+                top: 3*document.documentElement.clientHeight - 3*92,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>
