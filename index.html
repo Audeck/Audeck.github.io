@@ -22,7 +22,7 @@
                 <img id="mobile-nav-close" class="mobile-nav-close" src="multimedia/mobile-nav-close.svg" alt="Close the navigation menu.">
 
                 <ul class="nav-list">
-                    <li><a id="nav-compete" alt="Compete" onclick="competeScroll()">Competitions</a></li>
+                    <li><a id="nav-mod" alt="Mod" onclick="modScroll()">Mod</a></li>
                     <li><a id="nav-socials" alt="Socials" onclick="socialsScroll()">Socials</a></li>
                     <li><a id="nav-donate" alt="Donate" onclick="donateScroll()">Donate</a></li>
                 </ul>
@@ -32,20 +32,32 @@
 
     <div class="hero-container"><div></div></div>
 
-    <section class="compete">
+    <section class="mod">
         <div class="container">
-            <div class="compete-top">
-                <div class="compete-top-text">
-                    <h1>A new home for <span>Minecraft challenges</span>.</h1>
-                    <p>Whether you want to challenge yourself, compete with others, or just check out the top times, feel free to take a look!</p>
+            <h1>All the challenges, <span>one</span> mod.</h1>
+
+            <div class="mod-content">
+                <p>
+                    Every challenge ever featured on my YouTube
+                    channel is included. Main menu is accessible
+                    via the vanilla "Create World" screen.<br>
+                    <br>
+                    The mod also includes a seamless speedrun
+                    timer, which you can use for vanilla worlds too!<br>
+                    <br>
+                    It's (almost) standalone, built using <a href="https://fabricmc.net/" target="_blank" rel="noreferrer noopener">Fabric</a>
+                    and <a href="https://github.com/OnyxStudios/Cardinal-Components-API/wiki" target="_blank" rel="noreferrer noopener">Cardinal Components</a> - thank you!<br>
+                    <br>
+                    Check out <a href="#" target="_blank" rel="noreferrer noopener">this video</a> for a guide on mod installation.
+                    If you enjoy the mod, please consider <a onclick="donateScroll()">donating</a>!
+                </p>
+
+                <div class="mod-content-images">
+                    <img src="multimedia/screenshots.png" alt="">
                 </div>
-                <img src="multimedia/trophy.svg">
             </div>
 
-            <div class="compete-bottom">
-                <p><span>Current competition:</span> Beating Minecraft without mining!</p>
-                <a href="http://compete.audeck.xyz">EXPLORE</a>
-            </div>
+            <a class="download-button" href="#">DOWNLOAD</a>
         </div>
     </section>
 
@@ -93,7 +105,7 @@
                 </div>
                 <p>
                     I don't want to put any of my content behind a pay wall.<br>
-                    As such, donations are my main source of upkeep.<br>
+                    As such, donations are my main source of income.<br>
                     Donate <span>only</span> if you have the money to spare.<br>
                     Please &amp; thank you!
                 </p>
@@ -103,7 +115,7 @@
     </section>
 
     <footer class="signature">
-        <p class="signature-text">Website made with <a href="https://twitter.com/dog_feelings" target="_blank" rel="noreferrer noopener" alt="love">&lt;3</a> by audeck. | Work in progress.</p>
+        <p class="signature-text">Website made with <a href="https://twitter.com/dog_feelings" target="_blank" rel="noreferrer noopener" alt="love">&lt;3</a> by audeck.</p>
     </footer>
 
     <script>
@@ -111,7 +123,7 @@
         let navbar = document.getElementById('navbar');
         let mobile_button_open = document.getElementById('mobile-nav-open');
         let mobile_button_exit = document.getElementById('mobile-nav-close');
-        let nav_compete = document.getElementById('nav-compete');
+        let nav_mod = document.getElementById('nav-mod');
         let nav_socials = document.getElementById('nav-socials');
         let nav_donate = document.getElementById('nav-donate');
 
@@ -131,22 +143,42 @@
             navbar.style.boxShadow = "0 0 1rem #000000" + ("0" + Math.round((255 * 0.2 * Math.min(distance_scrolled/200, 1))).toString(16)).slice(-2);
             navbar.style.backdropFilter = 'blur(' + Math.round(16 * Math.min(distance_scrolled/200, 1)) + 'px)';
 
+            /*
             if (distance_scrolled >= 5*viewport_height/2 - 92) {
-                nav_compete.style.color = "#000000";
+                nav_mod.style.color = "#000000";
                 nav_socials.style.color = "#000000";
                 nav_donate.style.color = "var(--moonmoon)";
             } else if (distance_scrolled >= 3*viewport_height/2 - 92) {
-                nav_compete.style.color = "#000000";
+                nav_mod.style.color = "#000000";
                 nav_socials.style.color = "var(--moonmoon)";
                 nav_donate.style.color = "#000000";
             } else if (distance_scrolled >= viewport_height/2 - 92) {
-                nav_compete.style.color = "var(--moonmoon)";
+                nav_mod.style.color = "var(--moonmoon)";
                 nav_socials.style.color = "#000000";
                 nav_donate.style.color = "#000000";
             } else {
-                nav_compete.style.color = "#000000";
+                nav_mod.style.color = "#000000";
                 nav_socials.style.color = "#000000";
                 nav_donate.style.color = "#000000";
+            }
+            */
+
+            if (distance_scrolled >= 5*viewport_height/2 - 92) {
+                nav_mod.style.background = "#000000";
+                nav_socials.style.background = "#000000";
+                nav_donate.style.background = "var(--moonmoon_gradient)";
+            } else if (distance_scrolled >= 3*viewport_height/2 - 92) {
+                nav_mod.style.background = "#000000";
+                nav_socials.style.background = "var(--moonmoon_gradient)";
+                nav_donate.style.background = "#000000";
+            } else if (distance_scrolled >= viewport_height/2 - 92) {
+                nav_mod.style.background = "var(--moonmoon_gradient)";
+                nav_socials.style.background = "#000000";
+                nav_donate.style.background = "#000000";
+            } else {
+                nav_mod.style.background = "#000000";
+                nav_socials.style.background = "#000000";
+                nav_donate.style.background = "#000000";
             }
         }
 
@@ -157,7 +189,7 @@
             });
         }
 
-        function competeScroll() {
+        function modScroll() {
             window.scrollTo({
                 top: document.documentElement.clientHeight - 92,
                 behavior: "smooth"
