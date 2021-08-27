@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-    --moonmoon: rgb(130, 100, 200);  //#8264c8
+    --moonmoon: rgb(130, 100, 200);  // #8264c8
+    --moonmoon_gradient: linear-gradient(100deg, rgba(170,75,198,1) 0%, rgba(116,64,253,1) 100%);  // #AA4BC6 - #7440FD
     --snow: url("../multimedia/snow-texture.png");
 }
 
@@ -122,7 +123,7 @@ div.hero-container {
     height: 100vh;
 }
 
-section.compete {
+section.mod {
     //display: flex;
     background-image: var(--snow);
     width: 100%;
@@ -130,70 +131,66 @@ section.compete {
 
     div.container {
         display: flex;
-        height: calc(76vh - 92px);
-        padding: 12vh 0 12vh 0;
+        height: calc(80vh - 92px);
+        padding: 10vh 0 10vh 0;
         flex-direction: column;
         justify-content: space-between;
 
-        div.compete-top {
+        h1 {
+            font-size: 4.2em;
+            margin: 0;
+            align-self: center;
+
+            span {
+                //color: var(--moonmoon);
+                background: var(--moonmoon_gradient);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        div.mod-content {
             display: flex;
             flex-direction: row;
-            align-content: center;
             justify-content: space-between;
-            padding: 0 1em;
+            align-items: center;
 
-            div.compete-top-text {
-                //margin-top: 3.4em;
+            p {
+                font-size: 1.65em;
+                margin: 0;
+                margin-left: 1.5em;
+                max-width: 550px;
 
-                h1 {
-                    font-size: 3em;
-                    margin: 0;
-
-                    span {
-                        color: var(--moonmoon);
+                a {
+                    text-decoration: none;
+                    //color: var(--moonmoon);
+                    background: var(--moonmoon_gradient);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    
+                    &:hover {
+                        cursor: pointer;
                     }
-                }
-
-                p {
-                    font-size: 1.5em;
-                    margin: 0;
-                    margin-left: 2em;
-                    max-width: 32em;
                 }
             }
 
             img {
-                width: 14em;
-                transform: rotate(15deg);
+                align-self: center;
+                width: 42em;
             }
         }
 
-        div.compete-bottom {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-
-            p {
-                font-size: 1.5em;
-                font-weight: bold;
-                margin: 0;
-                margin-left: 3em;
-
-                span {
-                    color: var(--moonmoon);
-                }
-            }
-
-            a {
-                color: white;
-                font-size: 2em;
-                font-weight: bold;
-                text-decoration: none;
-                background-color: var(--moonmoon);
-                padding: 0.69em 2em;
-                border-radius: 999em;
-            }
+        a.download-button {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            background-image: var(--moonmoon_gradient);
+            padding: 0.69em 2em;
+            border-radius: 999em;
+            width: 6em;
+            align-self: center;
         }
     }
 }
@@ -249,19 +246,22 @@ section.socials {
 
             h1 {
                 margin: 0;
-                font-size: 3em;
+                font-size: 3.3em;
                 font-weight: bold;
 
                 span {
-                    color: var(--moonmoon);
+                    //color: var(--moonmoon);
+                    background: var(--moonmoon_gradient);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
 
             p {
                 margin: 0;
-                margin-right: 2em;
+                margin-right: 1.5em;;
                 text-align: right;
-                font-size: 1.5em;
+                font-size: 1.65em;
 
                 span {
                     color: white;
@@ -307,7 +307,10 @@ section.donate {
                 margin: 0;
 
                 span {
-                    color: var(--moonmoon);
+                    //color: var(--moonmoon);
+                    background: var(--moonmoon_gradient);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
 
@@ -317,8 +320,11 @@ section.donate {
                 margin: 0;
 
                 span {
-                    color: var(--moonmoon);
+                    //color: var(--moonmoon);
                     font-weight: bold;
+                    background: var(--moonmoon_gradient);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
         }
@@ -328,7 +334,7 @@ section.donate {
             font-size: 2em;
             font-weight: bold;
             text-decoration: none;
-            background-color: var(--moonmoon);
+            background: var(--moonmoon_gradient);
             padding: 0.69em 2em;
             border-radius: 999em;
         }
@@ -348,60 +354,41 @@ footer.signature {
         text-align: center;
         font-size: 1em;
         margin: 0;
+        padding-top: .4em;
             
         a {
             text-decoration: none;
             color: var(--moonmoon);
+            background: var(--moonmoon_gradient);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }
 
 @media only screen and (max-width: 1095px) {
-    section.compete {
+    section.mod {
         font-size: .6em;
         text-align: center;
 
         div.container {
-            div.compete-top {
-                display: flex;
+            justify-content: start;
+            h1 {
+                font-size: 3.3em;
+                margin-bottom: .2em;
+                margin-top: .4em;
+            }
+
+            div.mod-content {
                 justify-content: center;
-                div.compete-top-text {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    p {
-                        margin-left: 0;
-                        font-size: 1.5em;
-                    }
-
-                    h1 {
-                        font-size: 3em;
-                        margin-bottom: .3em;
-                        line-height: 1.2em;
-                        max-width: 476px;
-                    }
+                p {
+                    align-self: center;
+                    margin-bottom: 6em;
+                    margin-left: 0;
                 }
 
                 img {
                     display: none;
-                }
-            }
-
-            div.compete-bottom {
-                flex-direction: column-reverse;
-                p {
-                    margin-left: 0;
-                    font-size: 1.5em;
-                    
-                    span {
-                        margin-left: 25%;
-                        margin-right: 25%;
-                    }
-                }
-
-                a {
-                    margin-bottom: 1em;
                 }
             }
         }
@@ -443,12 +430,12 @@ footer.signature {
 
                 p {
                     text-align: center;
-                    font-size: 1.5em;
+                    font-size: 1.65em;
                     margin: 0;
                 }
 
                 h1 {
-                    font-size: 3em;
+                    font-size: 3.3em;
                 }
             }
         }
@@ -497,6 +484,25 @@ footer.signature {
     }
 }
 
+@media only screen and (max-width: 419px) {
+    section.mod div.container {
+        padding: 0;
+        justify-content: space-evenly;
+
+        h1 {
+            max-width: 90vw;
+            margin-top: 4em;
+        }
+
+        div.mod-content {
+            p {
+                max-width: 90vw;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 420px) {
     section.donate div.container div.donate-text p {
         font-size: 1.5em;
@@ -530,15 +536,21 @@ footer.signature {
                     margin: 0;
 
                     li a {
-                        color: black;
+                        //color: black;
                         font-size: 1em;
                         padding: 0;
                         margin: 0 1em .6em;
                         text-align: center;
+                        background: black;
+                        background-clip: text !important; 
+                        -webkit-text-fill-color: transparent !important;
+                        cursor: pointer;
 
                         &:hover {
-                            //font-weight: normal;
-                            color: var(--moonmoon) !important;
+                            //color: var(--moonmoon) !important;
+                            background: var(--moonmoon_gradient) !important;
+                            background-clip: text !important;
+                            -webkit-text-fill-color: transparent !important;
                             cursor: pointer;
                         }
 
@@ -556,7 +568,7 @@ footer.signature {
         }
     }
 
-    section.compete {
+    section.mod {
         font-size: 0.8em;
     }
 
@@ -568,7 +580,21 @@ footer.signature {
         font-size: 0.8em;
 
         div.container div.donate-text p {
-            font-size: 1.5em;
+            font-size: 1.65em;
+        }
+    }
+
+    section.donate div.container {
+        padding-top: 2vh;
+
+        div.donate-text {
+            h1 {
+                font-size: 3.3em;
+            }
+
+            p {
+                margin-top: .2em;
+            }
         }
     }
 
@@ -583,25 +609,13 @@ footer.signature {
         margin: 0 auto;
     }
 
-    section.compete {
+    section.mod {
         font-size: 0.8em;
 
         div.container {
-            div.compete-top {
-                img {
-                    width: 14em;
-                }
-            }
-
-            div.compete-bottom {
-                a {
-                    margin-right: 1.9em;
-                }
-
-                p {
-                    margin-left: 2.6em;
-                }
-            }
+            padding: 4vh 0;
+            justify-content: space-evenly;
+            height: calc(92vh - 92px);
         }
     }
 
@@ -612,28 +626,20 @@ footer.signature {
         }
     }
 
-    section.compete div.container div.compete-top img {
-        width: 14em;
-    }
-
-    section.compete div.container div.compete-bottom a {
-        margin-right: .4em;
-    }
-
     section.socials div.container {
         width: 1080px;
         margin: 0 auto;
     }
 }
 
-@media only screen and (min-width: calc(1080px/0.75)) {
+@media only screen and (min-width: calc(1080px/0.69)) {
     div.container {
-        width: 75%;
+        width: 69%;
         margin: 0 auto;
     }   
 
     section.socials div.container {
-        width: 75%;
+        width: 69%;
         margin: 0 auto;
     }
 

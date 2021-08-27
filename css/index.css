@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
   --moonmoon: rgb(130, 100, 200);
+  --moonmoon_gradient: linear-gradient(100deg, rgba(170,75,198,1) 0%, rgba(116,64,253,1) 100%);
   --snow: url("../multimedia/snow-texture.png");
 }
 
@@ -128,18 +129,18 @@ div.hero-container {
   height: 100vh;
 }
 
-section.compete {
+section.mod {
   background-image: var(--snow);
   width: 100%;
   height: calc(100vh - 92px);
 }
 
-section.compete div.container {
+section.mod div.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: calc(76vh - 92px);
-  padding: 12vh 0 12vh 0;
+  height: calc(80vh - 92px);
+  padding: 10vh 0 10vh 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -149,7 +150,21 @@ section.compete div.container {
           justify-content: space-between;
 }
 
-section.compete div.container div.compete-top {
+section.mod div.container h1 {
+  font-size: 4.2em;
+  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.mod div.container h1 span {
+  background: var(--moonmoon_gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section.mod div.container div.mod-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,71 +172,52 @@ section.compete div.container div.compete-top {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 1em;
-}
-
-section.compete div.container div.compete-top div.compete-top-text h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-section.compete div.container div.compete-top div.compete-top-text h1 span {
-  color: var(--moonmoon);
-}
-
-section.compete div.container div.compete-top div.compete-top-text p {
-  font-size: 1.5em;
-  margin: 0;
-  margin-left: 2em;
-  max-width: 32em;
-}
-
-section.compete div.container div.compete-top img {
-  width: 14em;
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
-}
-
-section.compete div.container div.compete-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-section.compete div.container div.compete-bottom p {
-  font-size: 1.5em;
-  font-weight: bold;
+section.mod div.container div.mod-content p {
+  font-size: 1.65em;
   margin: 0;
-  margin-left: 3em;
+  margin-left: 1.5em;
+  max-width: 550px;
 }
 
-section.compete div.container div.compete-bottom p span {
-  color: var(--moonmoon);
+section.mod div.container div.mod-content p a {
+  text-decoration: none;
+  background: var(--moonmoon_gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-section.compete div.container div.compete-bottom a {
+section.mod div.container div.mod-content p a:hover {
+  cursor: pointer;
+}
+
+section.mod div.container div.mod-content img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 42em;
+}
+
+section.mod div.container a.download-button {
   color: white;
   font-size: 2em;
   font-weight: bold;
   text-decoration: none;
-  background-color: var(--moonmoon);
+  text-align: center;
+  background-image: var(--moonmoon_gradient);
   padding: 0.69em 2em;
   border-radius: 999em;
+  width: 6em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 section.socials {
@@ -305,19 +301,21 @@ section.socials div.container div.socials-text {
 
 section.socials div.container div.socials-text h1 {
   margin: 0;
-  font-size: 3em;
+  font-size: 3.3em;
   font-weight: bold;
 }
 
 section.socials div.container div.socials-text h1 span {
-  color: var(--moonmoon);
+  background: var(--moonmoon_gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section.socials div.container div.socials-text p {
   margin: 0;
-  margin-right: 2em;
+  margin-right: 1.5em;
   text-align: right;
-  font-size: 1.5em;
+  font-size: 1.65em;
 }
 
 section.socials div.container div.socials-text p span {
@@ -381,7 +379,9 @@ section.donate div.container div.donate-text h1 {
 }
 
 section.donate div.container div.donate-text h1 span {
-  color: var(--moonmoon);
+  background: var(--moonmoon_gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section.donate div.container div.donate-text p {
@@ -391,8 +391,10 @@ section.donate div.container div.donate-text p {
 }
 
 section.donate div.container div.donate-text p span {
-  color: var(--moonmoon);
   font-weight: bold;
+  background: var(--moonmoon_gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section.donate div.container a.donate-button {
@@ -400,7 +402,7 @@ section.donate div.container a.donate-button {
   font-size: 2em;
   font-weight: bold;
   text-decoration: none;
-  background-color: var(--moonmoon);
+  background: var(--moonmoon_gradient);
   padding: 0.69em 2em;
   border-radius: 999em;
 }
@@ -423,67 +425,46 @@ footer.signature p.signature-text {
   text-align: center;
   font-size: 1em;
   margin: 0;
+  padding-top: .4em;
 }
 
 footer.signature p.signature-text a {
   text-decoration: none;
   color: var(--moonmoon);
+  background: var(--moonmoon_gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (max-width: 1095px) {
-  section.compete {
+  section.mod {
     font-size: .6em;
     text-align: center;
   }
-  section.compete div.container div.compete-top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  section.mod div.container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  section.mod div.container h1 {
+    font-size: 3.3em;
+    margin-bottom: .2em;
+    margin-top: .4em;
+  }
+  section.mod div.container div.mod-content {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  section.compete div.container div.compete-top div.compete-top-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  section.compete div.container div.compete-top div.compete-top-text p {
+  section.mod div.container div.mod-content p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 6em;
     margin-left: 0;
-    font-size: 1.5em;
   }
-  section.compete div.container div.compete-top div.compete-top-text h1 {
-    font-size: 3em;
-    margin-bottom: .3em;
-    line-height: 1.2em;
-    max-width: 476px;
-  }
-  section.compete div.container div.compete-top img {
+  section.mod div.container div.mod-content img {
     display: none;
-  }
-  section.compete div.container div.compete-bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  section.compete div.container div.compete-bottom p {
-    margin-left: 0;
-    font-size: 1.5em;
-  }
-  section.compete div.container div.compete-bottom p span {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-  section.compete div.container div.compete-bottom a {
-    margin-bottom: 1em;
   }
   section.socials {
     font-size: .6em;
@@ -541,11 +522,11 @@ footer.signature p.signature-text a {
   }
   section.socials div.container div.socials-text p {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.65em;
     margin: 0;
   }
   section.socials div.container div.socials-text h1 {
-    font-size: 3em;
+    font-size: 3.3em;
   }
   section.donate {
     font-size: .6em;
@@ -580,6 +561,23 @@ footer.signature p.signature-text a {
   }
   div.navbar div.container div.logo a img.logo-img {
     padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 419px) {
+  section.mod div.container {
+    padding: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  section.mod div.container h1 {
+    max-width: 90vw;
+    margin-top: 4em;
+  }
+  section.mod div.container div.mod-content p {
+    max-width: 90vw;
+    margin-bottom: 2em;
   }
 }
 
@@ -623,14 +621,19 @@ footer.signature p.signature-text a {
     margin: 0;
   }
   div.navbar div.container nav ul.nav-list li a {
-    color: black;
     font-size: 1em;
     padding: 0;
     margin: 0 1em .6em;
     text-align: center;
+    background: black;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    cursor: pointer;
   }
   div.navbar div.container nav ul.nav-list li a:hover {
-    color: var(--moonmoon) !important;
+    background: var(--moonmoon_gradient) !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
     cursor: pointer;
   }
   div.navbar div.container nav ul.nav-list li a:before {
@@ -641,7 +644,7 @@ footer.signature p.signature-text a {
     overflow: hidden;
     visibility: hidden;
   }
-  section.compete {
+  section.mod {
     font-size: 0.8em;
   }
   section.socials {
@@ -651,7 +654,16 @@ footer.signature p.signature-text a {
     font-size: 0.8em;
   }
   section.donate div.container div.donate-text p {
-    font-size: 1.5em;
+    font-size: 1.65em;
+  }
+  section.donate div.container {
+    padding-top: 2vh;
+  }
+  section.donate div.container div.donate-text h1 {
+    font-size: 3.3em;
+  }
+  section.donate div.container div.donate-text p {
+    margin-top: .2em;
   }
   footer.signature {
     font-size: 1em;
@@ -663,17 +675,15 @@ footer.signature p.signature-text a {
     width: 1080px;
     margin: 0 auto;
   }
-  section.compete {
+  section.mod {
     font-size: 0.8em;
   }
-  section.compete div.container div.compete-top img {
-    width: 14em;
-  }
-  section.compete div.container div.compete-bottom a {
-    margin-right: 1.9em;
-  }
-  section.compete div.container div.compete-bottom p {
-    margin-left: 2.6em;
+  section.mod div.container {
+    padding: 4vh 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: calc(92vh - 92px);
   }
   section.socials div.container {
     -webkit-box-pack: justify;
@@ -681,25 +691,19 @@ footer.signature p.signature-text a {
             justify-content: space-between;
     width: 100vw;
   }
-  section.compete div.container div.compete-top img {
-    width: 14em;
-  }
-  section.compete div.container div.compete-bottom a {
-    margin-right: .4em;
-  }
   section.socials div.container {
     width: 1080px;
     margin: 0 auto;
   }
 }
 
-@media only screen and (min-width: calc(1080px/0.75)) {
+@media only screen and (min-width: calc(1080px/0.69)) {
   div.container {
-    width: 75%;
+    width: 69%;
     margin: 0 auto;
   }
   section.socials div.container {
-    width: 75%;
+    width: 69%;
     margin: 0 auto;
   }
   section.compete div.container div.compete-bottom a {
