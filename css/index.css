@@ -34,6 +34,7 @@ div.navbar {
       -ms-grid-row-align: center;
       align-self: center;
   width: 100%;
+  height: calc(92px - 12.8px);
   background-color: rgba(255, 255, 255, 0);
   z-index: 999;
 }
@@ -159,6 +160,7 @@ section.mod div.container h1 {
 }
 
 section.mod div.container h1 span {
+  color: transparent;
   background: var(--moonmoon_gradient);
   background-clip: text;
   -moz-background-clip: text;
@@ -191,6 +193,7 @@ section.mod div.container div.mod-content p {
 
 section.mod div.container div.mod-content p a {
   text-decoration: none;
+  color: transparent;
   background: var(--moonmoon_gradient);
   background-clip: text;
   -moz-background-clip: text;
@@ -310,6 +313,7 @@ section.socials div.container div.socials-text h1 {
 }
 
 section.socials div.container div.socials-text h1 span {
+  color: transparent;
   background: var(--moonmoon_gradient);
   background-clip: text;
   -moz-background-clip: text;
@@ -385,6 +389,7 @@ section.donate div.container div.donate-text h1 {
 }
 
 section.donate div.container div.donate-text h1 span {
+  color: transparent;
   background: var(--moonmoon_gradient);
   background-clip: text;
   -moz-background-clip: text;
@@ -399,6 +404,7 @@ section.donate div.container div.donate-text p {
 }
 
 section.donate div.container div.donate-text p span {
+  color: transparent;
   font-weight: bold;
   background: var(--moonmoon_gradient);
   background-clip: text;
@@ -435,12 +441,12 @@ footer.signature p.signature-text {
   text-align: center;
   font-size: 1em;
   margin: 0;
-  padding-top: .4em;
+  padding-top: .1em;
 }
 
 footer.signature p.signature-text a {
   text-decoration: none;
-  color: var(--moonmoon);
+  color: transparent;
   background: var(--moonmoon_gradient);
   background-clip: text;
   -moz-background-clip: text;
@@ -559,6 +565,11 @@ footer.signature p.signature-text a {
 }
 
 @media only screen and (max-width: 767px) {
+  div.navbar {
+    height: calc(64px);
+    padding: 0;
+    padding-top: 4px;
+  }
   div.navbar div.container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -566,6 +577,10 @@ footer.signature p.signature-text a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
   }
   div.navbar div.container div.logo {
     margin: 0;
@@ -573,6 +588,15 @@ footer.signature p.signature-text a {
   }
   div.navbar div.container div.logo a img.logo-img {
     padding-left: 0;
+  }
+  section.mod {
+    height: calc(100vh - 64px);
+  }
+  section.socials {
+    height: calc(100vh - 64px);
+  }
+  section.donate {
+    height: calc(96vh - 69px);
   }
 }
 
@@ -633,6 +657,7 @@ footer.signature p.signature-text a {
     margin: 0;
   }
   div.navbar div.container nav ul.nav-list li a {
+    color: transparent;
     font-size: 1em;
     padding: 0;
     margin: 0 1em .6em;
@@ -645,6 +670,7 @@ footer.signature p.signature-text a {
     cursor: pointer;
   }
   div.navbar div.container nav ul.nav-list li a:hover {
+    color: transparent;
     background: var(--moonmoon_gradient) !important;
     background-clip: text !important;
     -moz-background-clip: text !important;
