@@ -145,6 +145,8 @@ section.mod {
                 //color: var(--moonmoon);
                 background: var(--moonmoon_gradient);
                 background-clip: text;
+                -moz-background-clip: text;
+                -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
@@ -166,6 +168,8 @@ section.mod {
                     //color: var(--moonmoon);
                     background: var(--moonmoon_gradient);
                     background-clip: text;
+                    -moz-background-clip: text;
+                    -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     
                     &:hover {
@@ -253,6 +257,8 @@ section.socials {
                     //color: var(--moonmoon);
                     background: var(--moonmoon_gradient);
                     background-clip: text;
+                    -moz-background-clip: text;
+                    -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
             }
@@ -310,6 +316,8 @@ section.donate {
                     //color: var(--moonmoon);
                     background: var(--moonmoon_gradient);
                     background-clip: text;
+                    -moz-background-clip: text;
+                    -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
             }
@@ -324,6 +332,8 @@ section.donate {
                     font-weight: bold;
                     background: var(--moonmoon_gradient);
                     background-clip: text;
+                    -moz-background-clip: text;
+                    -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
             }
@@ -361,6 +371,8 @@ footer.signature {
             color: var(--moonmoon);
             background: var(--moonmoon_gradient);
             background-clip: text;
+            -moz-background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     }
@@ -542,7 +554,9 @@ footer.signature {
                         margin: 0 1em .6em;
                         text-align: center;
                         background: black;
-                        background-clip: text !important; 
+                        background-clip: text !important;
+                        -moz-background-clip: text !important;
+                        -webkit-background-clip: text !important;
                         -webkit-text-fill-color: transparent !important;
                         cursor: pointer;
 
@@ -550,6 +564,8 @@ footer.signature {
                             //color: var(--moonmoon) !important;
                             background: var(--moonmoon_gradient) !important;
                             background-clip: text !important;
+                            -moz-background-clip: text !important;
+                            -webkit-background-clip: text !important;
                             -webkit-text-fill-color: transparent !important;
                             cursor: pointer;
                         }

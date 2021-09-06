@@ -161,6 +161,8 @@ section.mod div.container h1 {
 section.mod div.container h1 span {
   background: var(--moonmoon_gradient);
   background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -191,6 +193,8 @@ section.mod div.container div.mod-content p a {
   text-decoration: none;
   background: var(--moonmoon_gradient);
   background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -308,6 +312,8 @@ section.socials div.container div.socials-text h1 {
 section.socials div.container div.socials-text h1 span {
   background: var(--moonmoon_gradient);
   background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -381,6 +387,8 @@ section.donate div.container div.donate-text h1 {
 section.donate div.container div.donate-text h1 span {
   background: var(--moonmoon_gradient);
   background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -394,6 +402,8 @@ section.donate div.container div.donate-text p span {
   font-weight: bold;
   background: var(--moonmoon_gradient);
   background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -433,6 +443,8 @@ footer.signature p.signature-text a {
   color: var(--moonmoon);
   background: var(--moonmoon_gradient);
   background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -627,12 +639,16 @@ footer.signature p.signature-text a {
     text-align: center;
     background: black;
     background-clip: text !important;
+    -moz-background-clip: text !important;
+    -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     cursor: pointer;
   }
   div.navbar div.container nav ul.nav-list li a:hover {
     background: var(--moonmoon_gradient) !important;
     background-clip: text !important;
+    -moz-background-clip: text !important;
+    -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     cursor: pointer;
   }
